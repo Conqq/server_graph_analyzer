@@ -10,6 +10,22 @@
     <form method="post">
         <label for="tickers">Tickers (comma separated):</label>
         <input type="text" id="tickers" name="tickers" value="{{ tickers }}" placeholder="SBER, GAZP">
+<<<<<<< HEAD
+=======
+        <label for="start">From:</label>
+        <input type="date" id="start" name="start" value="{{ start }}">
+        <label for="end">To:</label>
+        <input type="date" id="end" name="end" value="{{ end }}">
+        <label for="chart_type">Chart type:</label>
+        <select id="chart_type" name="chart_type">
+            <option value="line" {% if chart_type == 'line' %}selected{% endif %}>Line</option>
+            <option value="candlestick" {% if chart_type == 'candlestick' %}selected{% endif %}>Candlestick</option>
+        </select>
+        <label>
+            <input type="checkbox" name="elliott" {% if elliott %}checked{% endif %}>
+            Elliott waves
+        </label>
+>>>>>>> origin/codex/-api-5dhsxm
         <button type="submit">Show</button>
     </form>
     {% for graph in graphs %}
