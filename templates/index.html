@@ -23,6 +23,26 @@
             <input type="checkbox" name="elliott" {% if elliott %}checked{% endif %}>
             Elliott waves
         </label>
+        <label>
+            <input type="checkbox" name="sma" {% if sma %}checked{% endif %}>
+            SMA
+        </label>
+        <label>
+            <input type="checkbox" name="ema" {% if ema %}checked{% endif %}>
+            EMA
+        </label>
+        <label>
+            <input type="checkbox" name="bollinger" {% if bollinger %}checked{% endif %}>
+            Bollinger Bands
+        </label>
+        <label>
+            <input type="checkbox" name="macd" {% if macd %}checked{% endif %}>
+            MACD
+        </label>
+        <label>
+            <input type="checkbox" name="rsi" {% if rsi %}checked{% endif %}>
+            RSI
+        </label>
         <button type="submit">Show</button>
     </form>
     {% for graph in graphs %}
