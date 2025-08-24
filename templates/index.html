@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MOEX Chart Viewer</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>MOEX Chart Viewer</h1>
+    <form method="post">
+        <label for="tickers">Tickers (comma separated):</label>
+        <input type="text" id="tickers" name="tickers" value="{{ tickers }}" placeholder="SBER, GAZP">
+        <button type="submit">Show</button>
+    </form>
+    {% for graph in graphs %}
+    <div id="graph{{ loop.index }}"></div>
+    <script>
+        var fig = {{ graph | safe }};
+        Plotly.newPlot('graph{{ loop.index }}', fig.data, fig.layout);
+    </script>
+    {% endfor %}
+</body>
+</html>
