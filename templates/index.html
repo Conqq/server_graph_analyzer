@@ -10,8 +10,6 @@
     <form method="post">
         <label for="tickers">Tickers (comma separated):</label>
         <input type="text" id="tickers" name="tickers" value="{{ tickers }}" placeholder="SBER, GAZP">
-<<<<<<< HEAD
-=======
         <label for="start">From:</label>
         <input type="date" id="start" name="start" value="{{ start }}">
         <label for="end">To:</label>
@@ -25,7 +23,6 @@
             <input type="checkbox" name="elliott" {% if elliott %}checked{% endif %}>
             Elliott waves
         </label>
->>>>>>> origin/codex/-api-5dhsxm
         <button type="submit">Show</button>
     </form>
     {% for graph in graphs %}
